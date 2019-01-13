@@ -1,0 +1,61 @@
+
+body{
+	width: 800px;
+}
+#Book{
+	width: 500px;
+	height: 200px;
+	margin-left: 120px;
+}
+h1{	
+	text-align: center;
+	color: DarkRed;
+}
+input[type=text]:focus{
+border-color: dodgerBlue;
+box-shadow: 0 0 8px 0 dodgerBlue;
+}
+label {
+    color:black;
+    float: left;
+    width: 8em;
+    text-align: right;}
+inputleft {
+    width: 40%;
+    margin-left: 1em;
+    margin-bottom: .5em;}
+input:focus {
+    border: 2px solid navy; }
+input:invalid{
+		border: 2px solid red;
+	}
+legend{
+	    font-weight: bold;
+	}
+select{
+margin-left: 1em;
+}
+
+footer{
+	clear: both;
+}
+#submitButton
+{
+	margin-left: 45%;
+	font-size: 20px;
+	color: red;
+	
+}
+#fNerror,#lNerror,#pherror,#emerror,#pcerror,#aderror,#carderror,#dateerror{
+	color: red;
+}
+
+#ok1,#ok2,#ok3,#ok4,#ok5,#ok6,#ok7,#ok8 {
+	color:green;
+}
+#img{
+	width: 50px;
+	height:  70px;
+	float: right;
+	margin-right: 200px;
+}

@@ -1,0 +1,72 @@
+<html>
+	<head>
+		<title>Order Book</title>
+		<link rel="stylesheet" href="styles/form.css">
+		<link rel="stylesheet" href="styles/home.css">
+		<script src="myjavascript.js"></script>
+		<img src="images/header.jpg" alt="Book" class="toshow" style="display:none;" id="Book">
+		
+		<h1 class="toshow" style="display:none;">Book Order Form</h1>
+		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script>
+		$(document).ready(function()
+		{ 			
+                $(".toshow").fadeIn(5000);			
+		});		
+		</script>
+	</head>
+	<body>
+		<form action="bookOrder.php" method="post">
+			<fieldset>
+				 <legend>Customer Info</legend>
+				 <label>First name:</label>
+				 <input type="text" id="firstName"  name="fName" pattern="[A-Za-z]+" title="Please enter only letter"  autofocus required><span id="fNerror"></span><span id="ok1"></span><br><br>
+				 <label>Last name:</label>
+				 <input type="text" id="lastName" name="lName"  pattern="[A-Za-z]+" title="Please enter only letter"  required><span id="lNerror"></span><span id="ok2"></span><br><br>
+				 <label>Phone Number:</label>
+				 <input type="text" id="phoneNumber" name="phNumber" required><span id="pherror"></span><span id="ok3"></span><br><br>
+				 <label>email:</label>
+				 <input type="text" id="email"><span id="emerror"></span><span id="ok4"></span><br><br>
+				 <label>Street Adress:</label>
+				 <input type="text" id="address" name="stAddress" required><span id="aderror"></span><span id="ok5"></span><br><br>
+				 <label>City:</label>
+				 <input type="text" id="city" name="city" required><span id="aderror"></span><span id="ok5"></span>  Provinces:						
+				 <select id="province" name="province_code">
+						<option value="1">AB</option><option value="2">BC</option><option value="3">MB</option>
+						<option value="4">NB</option><option value="5">NL</option><option value="6">NS</option>
+						<option value="7">NT</option><option value="8">NU</option><option value="9">ON</option>
+						<option value="10">PE</option><option value="11">QC</option><option value="12">SK</option>
+						<option value="13">YT</option>
+					</select><br><br>
+				 <label>Postal Code:</label>
+				 <input type="text" id="postalCode" name="postalCode" required><span id="pcerror"></span><span id="ok6"></span><br><br>
+				 
+			</fieldset>
+			<br><br>
+			<fieldset>
+			<Legend id="order">Order Book</legend>
+				<fieldset>
+                <input type="checkbox" name="book" value="KREMLIN">THE KREMLIN CONSPIRACY --------- Price: $31.76
+				<img src="images/books/The kremlin.jpg" id="img">
+				
+			
+				<p>Quantity:<input type="number" name="book1" id="book1" value="0" min="0" max="20"></p>			
+				</fieldset>
+				<fieldset>
+                <input type="checkbox" name="book" value="ROOM">THE ROOM ON RUE AMELIE --------- Price: $30.13
+				<img src="images/books/The Room on Rue.jpg" id="img">
+				<p>Quantity: <input type="number" name="book2" id="book2" value="0" min="0" max="20"></p>
+				</fieldset>
+				<fieldset>
+                <input type="checkbox" name="book" value="MAGNOLIA">MAGNOLIA TABLE --------- Price: $22.19
+				<img src="images/books/magnolia.jpg" id="img">
+				<p>Quantity: <input type="number" name="book3" id="book3" value="0" min="0" max="20"></p>
+				</fieldset>
+			</fieldset><br><br>
+			
+			<input type="submit" id="submitButton" value="Submit" onclick="submitForm();">
+		</form>
+	</body>
+	<footer></footer>
+</html>
